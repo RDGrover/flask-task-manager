@@ -5,7 +5,8 @@
 
 
     <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_task') }}">
+            <!-- category selector -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix teal-text text-darken-3">folder_open</i>
@@ -18,6 +19,7 @@
                     <label for="category_name">Task Category</label>
                 </div>
             </div>
+            <!-- task name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix teal-text text-darken-3">create</i>
@@ -26,6 +28,7 @@
                     <label for="task_name">Task Name</label>
                 </div>
             </div>
+            <!-- task description -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix teal-text text-darken-3">format_align_left</i>
@@ -34,6 +37,7 @@
                     <label for="task_description">Task Description</label>
                 </div>
             </div>
+            <!-- due date selector -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix teal-text text-darken-3">event</i>
@@ -42,6 +46,7 @@
                     <label for="due_date">Due Date</label>
                 </div>
             </div>
+            <!-- is urgent switch -->
             <div class="row">
                 <div class="input-field col s12">
                     <div class="switch">
@@ -52,6 +57,14 @@
                             Is Urgent
                         </label>
                     </div>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large teal darken-1 text-shadow">
+                        Add Task <i class="material-icons prefix">add_box</i>
+                    </button>
                 </div>
             </div>
         </form>
